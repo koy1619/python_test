@@ -13,6 +13,7 @@
 #      History:
 #=============================================================================
 '''
+
 class Bird(object):
     have_feather = True
     way_of_reproduction  = 'egg'
@@ -30,14 +31,18 @@ class Oriole(Bird):
     way_of_move = 'fly'
     position_in_KFC = False
 
-summer3 = Chicken()
 summer1 = Bird()
-summer2 = Bird()
+summer2 = Oriole()
+summer3 = Chicken()
 
 print summer1.way_of_reproduction
 print summer1.have_feather
 print summer2.have_feather
 print summer3.have_feather
+print summer3.way_of_move
+print summer3.position_in_KFC
+print summer2.way_of_move
+print summer2.position_in_KFC
 print 'summer1开始移动到坐标:',summer1.move(5,8)
 print 'summer2开始移动到坐标:',summer2.move(6,9)
 print 'summer3开始移动到坐标:',summer3.move(5,7)
