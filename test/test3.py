@@ -12,23 +12,34 @@
 #      History:
 #=============================================================================
 '''
+
 running = True
 while running:
 
-	money=raw_input('输入任意小于1 美元的金额:')
-	print money,'美分兑换结果是：'
+	money=raw_input('输入一个浮点数:')
 
 #	Status=isinstance(money,float)
-#	if Status==True :
+#	if Status==True and money < 1:
 #		running = False
-#	elif Status!=True:
+#	elif Status==False:
 #		print '你输入的不是一个浮点数'
+#		continue
 
-	if '.' in str(money):
-		running=False
-	else:
+
+#	if type(money)==type(0.0):
+#		running = False
+#	else:
+#		print '你输入的不是一个浮点数'
+#		continue
+
+	if  float(money) < 1 and float(money) > 0:
+		running = False
+
+	else :
 		print '您输入的不是一个浮点数'
 		continue
+
+	print money,'兑换结果是：'
 
 
 	money = float(money)
@@ -47,10 +58,10 @@ while running:
 	cent1=money
 
 	if cent25:
-	    print '25美分*',cent25
+	    print '25*',cent25
 	if cent10:
-	    print '10美分*',cent10
+	    print '10*',cent10
 	if cent5:
-	    print '5美分*',cent5
+	    print '5*',cent5
 	if cent1:
-	    print '1美分*',cent1
+	    print '1*',cent1
