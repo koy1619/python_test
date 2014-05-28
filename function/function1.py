@@ -44,6 +44,26 @@ else:
 
 print thisyear
 
+#4 while 循环
+
+running = True
+while running:
+
+    def function(year):
+        if (year % 4 == 0 and year % 100 !=0) or year %400 == 0 :
+            return True
+        else :
+            return False
+
+    year = int(raw_input("请输入年份:"))
+
+    if function(year):
+        print year,'是闰年'
+        running = False
+    else :
+        print year,'不是闰年'
+
+
 #判断
 i = 1
 x = 1
