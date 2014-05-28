@@ -13,6 +13,7 @@
 #      History:
 #=============================================================================
 '''
+#http://blog.csdn.net/wklken/article/details/7364360
 
 
 def use_httplib():
