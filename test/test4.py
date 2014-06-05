@@ -27,7 +27,7 @@ print "Database version : %s " % data
 #如果数据表已经存在使用execute()方法删除表。
 cursor.execute("DROP TABLE IF EXISTS test1")
 
-#创建数据表sql语句
+#创建数据表SQL语句
 sql = """CREATE TABLE test1 (
          FIRST_NAME  CHAR(20) NOT NULL,
          LAST_NAME  CHAR(20),
@@ -35,7 +35,7 @@ sql = """CREATE TABLE test1 (
          SEX CHAR(1),
          INCOME FLOAT )"""
 
-#执行sql语句
+#执行SQL语句
 cursor.execute(sql)
 
 '''
@@ -43,13 +43,13 @@ cursor.execute(sql)
 '''
 
 
-#sql插入语句
+#SQL插入语句
 sql = """INSERT INTO test1(FIRST_NAME,
          LAST_NAME, AGE, SEX, INCOME)
          VALUES ('Mac', 'Mohan', 20, 'M', 2000)"""
 
 try:
-    # 执行sql语句
+    # 执行SQL语句
     cursor.execute(sql)
     # 提交到数据库执行
     db.commit()
@@ -62,7 +62,7 @@ except:
 数据库查询
 '''
 
-# SQL 查询语句
+#SQL查询语句
 sql = "SELECT * FROM test1 \
         WHERE INCOME > '%d'" % (1000)
 try:
@@ -89,9 +89,14 @@ except:
 '''
 
 
-# SQL 更新语句
+#SQL更新语句
 sql = "UPDATE test1 SET AGE = AGE + 2 \
         WHERE SEX = '%c'" % ('M')
+
+'''
+#sql删除语句
+sql = "DELETE FROM EMPLOYEE WHERE AGE > '%d'" % (20)
+'''
 
 
 try:
